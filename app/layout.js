@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SnowEffect from "./Components/SnowEffect";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,6 +30,7 @@ export default function RootLayout({ children }) {
         {children}
         {/* toast */}
         <ToastContainer />
+        <SnowEffect />
       </body>
     </html>
   );
