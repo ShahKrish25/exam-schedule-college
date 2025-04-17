@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=no" />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        {/* toast */}
         <ToastContainer />
       </body>
     </html>
