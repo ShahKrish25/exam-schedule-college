@@ -9,12 +9,16 @@ const Card = ({ paper, date, startTime, endTime, index }) => {
   const [tick, setTick] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [daysLeft, setDaysLeft] = useState(null);
+  const [dayOfWeek, setDayOfWeek] = useState("");
+
 
   useEffect(() => {
     setIsMounted(true);
-
+    
     const [day, month, year] = date.split("/");
     const examDate = new Date(year, month - 1, day);
+    const dayName = examDate.toLocaleDateString("en-US", { weekday: "long" });
+    setDayOfWeek(dayName);
     const currentDate = new Date();
     const today = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
 
@@ -95,6 +99,7 @@ const Card = ({ paper, date, startTime, endTime, index }) => {
         <p className="mb-1 text-lg mt-2 font-bold">Start: {startTime}</p>
         <p className="mb-1 text-lg font-bold">End: {endTime}</p>
       </div>
+      <p className="absolute bottom-[-4px] right-5 text-gray-100 mb-1 text-md font-bold">Day: {dayOfWeek}</p>
 
       <div className="absolute inset-0 rounded-3xl pointer-events-none group-hover:bg-black/10 transition duration-300"></div>
     </div>
