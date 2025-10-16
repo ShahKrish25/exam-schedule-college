@@ -56,7 +56,7 @@ const Page = () => {
   const currentDate = new Date();
   let heading;
   if (currentDate < firstExamDate) {
-    heading = "Upcoming Exams Sem 5";
+    heading = "Upcoming Exams Semester 5";
   } else if (currentDate >= firstExamDate && currentDate <= lastExamDate) {
     heading = "Ongoing Exam";
   } else {
