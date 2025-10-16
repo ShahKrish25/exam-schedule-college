@@ -8,32 +8,44 @@ const parseDate = (dateString) => {
 const Page = () => {
   const data = [
     {
-      paper: "OSV",
-      date:"08/05/2025",
+      paper: "IPDC",
+      date:"14/11/2025",
       startTime:"10:30 AM",
       endTime:"01:00 PM",
     },
     {
-      paper: "COA",
-      date:"15/05/2025",
+      paper: "CS",
+      date:"17/11/2025",
       startTime:"10:30 AM",
       endTime:"01:00 PM",
     },
     {
-      paper: "DM",
-      date:"17/05/2025",
+      paper: "WD",
+      date:"19/11/2025",
       startTime:"10:30 AM",
       endTime:"01:00 PM",
     },
     {
-      paper: "PEM",
-      date:"19/05/2025",
+      paper: "CN",
+      date:"21/11/2025",
       startTime:"10:30 AM",
       endTime:"01:00 PM",
     },
     {
-      paper: "OOP",
-      date:"23/05/2025",
+      paper: "PE",
+      date:"25/11/2025",
+      startTime:"10:30 AM",
+      endTime:"01:00 PM",
+    },
+    {
+      paper: "DS",
+      date:"27/11/2025",
+      startTime:"10:30 AM",
+      endTime:"01:00 PM",
+    },
+    {
+      paper: "ADA",
+      date:"02/12/2025",
       startTime:"10:30 AM",
       endTime:"01:00 PM",
     },
@@ -44,7 +56,7 @@ const Page = () => {
   const currentDate = new Date();
   let heading;
   if (currentDate < firstExamDate) {
-    heading = "Upcoming Exam";
+    heading = "Upcoming Exams Sem 5";
   } else if (currentDate >= firstExamDate && currentDate <= lastExamDate) {
     heading = "Ongoing Exam";
   } else {
@@ -53,7 +65,7 @@ const Page = () => {
   return (
     <>
       <div className="flex flex-col items-center w-full h-full">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mt-10 mb-6">
+        <h1 className="text-4xl md:text-4xl font-bold text-white mt-10 mb-6">
           {heading}
         </h1>
         <div className="flex flex-wrap justify-center">

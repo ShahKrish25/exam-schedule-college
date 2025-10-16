@@ -62,7 +62,7 @@ const Card = ({ paper, date, startTime, endTime, index }) => {
 
   return (
     <>
-    <div className="group relative m-6 bg-gradient-to-br from-indigo-600 to-blue-500 w-78 h-75 md:w-68 md:h-68 rounded-3xl shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+    <div className="group relative m-6 bg-gradient-to-br from-cyan-600 to-gray-600 w-78 h-75 md:w-68 md:h-68 rounded-3xl shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl z-[9999]">
       <div className="absolute top-4 left-6 flex items-center">
         <h5 className="text-2xl font-bold text-white drop-shadow-lg">Paper</h5>
         {isMounted && tick && (
@@ -70,7 +70,7 @@ const Card = ({ paper, date, startTime, endTime, index }) => {
         )}
       </div>
 
-      <h2 className="absolute top-13 bg-gradient-to-br from-indigo-600 to-blue-500 p-2 rounded-2xl left-6 text-2xl font-bold text-white drop-shadow-lg">
+      <h2 className="absolute top-13 bg-gradient-to-br from-cyan-500 to-blue-500 p-2 rounded-2xl left-6 text-2xl font-bold text-white drop-shadow-lg">
         {paper}
       </h2>
 
@@ -93,13 +93,13 @@ const Card = ({ paper, date, startTime, endTime, index }) => {
       <div className="absolute bottom-4 left-6 text-white">
         <p className="mb-1 text-2xl absolute top-[-60px] left-1">Date</p>
         <BsArrowReturnRight className="absolute top-[-30px] left-12 text-xl" />
-        <span className="font-bold text-gray-300 bg-zinc-600 px-3 py-1 text-lg rounded-lg absolute top-[-37px] left-19">
+        <span className="font-bold text-amber-100  bg-zinc-600 px-3 py-1 text-lg rounded-lg absolute top-[-37px] left-19">
           {date}
         </span>
         <p className="mb-1 text-lg mt-2 font-bold">Start: {startTime}</p>
         <p className="mb-1 text-lg font-bold">End: {endTime}</p>
       </div>
-      <p className="absolute bottom-[-4px] right-5 text-gray-100 mb-1 text-md font-bold">Day: {dayOfWeek}</p>
+      <p className="absolute bottom-[-4px] right-0 text-amber-300 mb-1 text-md font-bold bg-gray-600 p-2 rounded-br-lg" >{dayOfWeek}</p>
 
       <div className="absolute inset-0 rounded-3xl pointer-events-none group-hover:bg-black/10 transition duration-300"></div>
     </div>
